@@ -1,0 +1,23 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.addBurger {
+  text-align: center;
+  background-color: rgb(179, 179, 179);
+}
+
+button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
