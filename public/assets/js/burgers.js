@@ -1,19 +1,10 @@
 $(function () {
   $(".devour").on("click", function (event) {
     const id = $(this).data("id");
-    let newDevour;
-    if ($(this).data.devoured) {
-      newDevour = false;
-    } else {
-      newDevour = true;
-    }
-    const newDevouredState = {
-      devoured: newDevour,
-    };
 
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newDevouredState,
+      data: event.currentTarget.dataset.newdevour,
     }).then(function () {
       console.log("Burger was devoured");
 
@@ -24,8 +15,9 @@ $(function () {
 
 $(".create-form").on("submit", function (event) {
   // Make sure to preventDefault on a submit event.
-  event.preventDefault();
 
+  event.preventDefault();
+  console.log("Adding burger");
   const newBurger = {
     burger_name: $("#ca").val().trim(),
   };
