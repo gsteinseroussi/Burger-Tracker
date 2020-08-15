@@ -23,16 +23,16 @@ router.post("/api/burgers", function (req, res) {
 router.put("/api/burgers/:id", function (req, res) {
   let condition = "id = " + req.params.id;
   console.log("req.body = ", req.body);
-  let devouredState;
-  if (req.body.devoured) {
-    devouredState = false;
-  } else {
-    devouredState = true;
-  }
-  console.log(devouredState);
+  // let devouredState;
+  // if (req.body.devoured) {
+  //   devouredState = false;
+  // } else {
+  //   devouredState = true;
+  // }
+  // console.log(devouredState);
   burger.updateOne(
     {
-      devoured: devouredState,
+      devoured: true,
     },
     condition,
     (result) => {

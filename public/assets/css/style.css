@@ -2,6 +2,7 @@ li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  list-style-type: none;
 }
 
 .label {
@@ -20,4 +21,8 @@ button {
 
 h1 {
   text-align: center;
+}
+
+.eaten {
+  display: none;
 }

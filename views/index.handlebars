@@ -11,16 +11,16 @@
 </ul>
 
 <h2>Already Eaten Burgers:</h2>
+<div id="eatenList">
+    <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{>burgers/burger-block devour=true}}
+        {{/if}}
+        {{/each}}
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{>burgers/burger-block devour=true}}
-    {{/if}}
-    {{/each}}
-
-</ul>
-
+    </ul>
+</div>
 <div class="addBurger">
     <h2>Add a Burger</h2>
     <form class="create-form">
