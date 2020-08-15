@@ -44,4 +44,15 @@ router.put("/api/burgers/:id", function (req, res) {
     }
   );
 });
+
+router.get("*", function (req, res) {
+  burger.selectAll(function (data) {
+    const hbsObject = {
+      burgers: data,
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+  });
+});
+
 module.exports = router;
